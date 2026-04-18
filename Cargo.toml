@@ -1,0 +1,21 @@
+[package]
+name = "android-adb-rs"
+version = "0.1.0"
+edition = "2021"
+authors = ["OutrageousStorm"]
+description = "Fast ADB CLI written in Rust — device info, app management, file transfer"
+
+[[bin]]
+name = "adb-rs"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4.4", features = ["derive"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.35", features = ["full"] }
+reqwest = "0.11"
+anyhow = "1.0"
+regex = "1.10"
+colored = "2.1"
+indicatif = "0.17"  # progress bars
